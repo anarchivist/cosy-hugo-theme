@@ -51,8 +51,9 @@ html {
     font-family: "Work Sans", Arial, Helvetica Neue, sans-serif;
     text-align: justify;
     line-height: 1.5;
-    color: #111;
-    background-color: #fefefe;
+    color: #fefefe;
+    background-color: #010101;
+    fill: currentColor;
 }
 template {
   display: none !important;
@@ -190,10 +191,10 @@ code {
 }
 .cmd {
     padding: 0.75rem;
-    background: #111;
+    background: #fefefe;
 }
 .cmd code {
-    color: #fefefe;
+    color: #111;
     white-space: nowrap;
 }
 .cmd code::before {
@@ -246,8 +247,8 @@ button {
     font-size: 1.25rem;
     border-radius: 0.33em;
     font-family: inherit;
-    background: #111;
-    color: #fefefe;
+    background: #fefefe;
+    color: #111;
     padding: 0.75rem;
     border: 0;
 }
@@ -271,9 +272,9 @@ label {
   font-weight: bold;
 }
 [for="themer"] {
-  background: #111;
+  background: #fefefe;
   border-radius: 0.33em;
-  color: #fefefe;
+  color: #111;
   padding: 0.25em 0.75em;
   margin: 0.5rem;
 }
@@ -308,7 +309,7 @@ th:empty {
 /* Tested using... table */
 .tested {
     text-align: center;
-    border: 1px solid #111;
+    border: 1px solid #fefefe;
 }
 .tested tr {
     display: flex;
@@ -318,13 +319,13 @@ th:empty {
     vertical-align: middle;
     overflow: hidden;
     flex: 1 0 auto;
-    border: 1px solid #111;
+    border: 1px solid #fefefe;
 }
 .tested th {
     width: 100%;
-    background-color: #111;
-    color: #fefefe;
-    outline-color: #111;
+    background-color: #fefefe;
+    color: #111;
+    outline-color: #fefefe;
 }
 .tested img {
     max-width: 3rem;
@@ -440,9 +441,9 @@ caption {
 
 /* After */
 .pattern [aria-current] {
-  background-color: #111;
-  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
-  color: #fefefe;
+  background-color: #fefefe;
+  clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%);
+  color: #111;
 }
 
 /* Menu button */
@@ -642,7 +643,7 @@ pre[class*=language-] code * {
     counter-reset: annotation;
 }
 .highlight {
-    background: #ddd;
+    background: #333;
     padding: 0.0625rem 0.33rem;
     border-radius: 0.5rem;
 }
@@ -652,8 +653,8 @@ pre[class*=language-] code * {
     content: counter(annotation);
     font-weight: bold;
     font-size: 0.5rem;
-    background: #111;
-    color: #fefefe;
+    background: #fefefe;
+    color: #111;
     border-radius: 1rem;
     margin-left: 0.25rem;
     padding: 0.125em 0.5em;
@@ -688,7 +689,7 @@ pre[class*=language-] code * {
     overflow-y: hidden;
 }
 .file-tree li {
-    background: #fefefe;
+    background: inherit;
     position: relative;
     white-space: nowrap;
 }
@@ -729,7 +730,7 @@ pre[class*=language-] code * {
 }
 [data-expands] {
     text-align: left;
-    color: #111;
+    color: #fefefe;
     border: 0;
     background: none;
     width: 100%;
@@ -776,7 +777,7 @@ p:empty {
 /* Site errors */
 .site-error {
     padding: 1.5rem;
-    background: #efefef;
+    background: #212121;
 }
 .site-error strong {
     color: #C83737;
@@ -834,8 +835,8 @@ h1 svg {
 }
 .colors span {
     line-height: 1;
-    background-color: #111;
-    color: #fefefe;
+    background-color: #fefefe;
+    color: #111;
     font-size: 0.75rem;
     padding: 0.25rem;
     position: absolute;
@@ -1019,6 +1020,11 @@ h1 svg {
     }
 }
 @media print {
+    html {
+      color: black;
+      background-color: white;
+      fill: black !important;
+    }
     .wrapper:not(.print-version) .intro-and-nav,
     .wrapper:not(.print-version) [role="contentinfo"] {
         display: none;
@@ -1026,8 +1032,23 @@ h1 svg {
     .main-and-footer {
         margin-left: 0;
     }
+    img[src*=".svg"] {
+      background: #111;
+      fill: #fefefe;
+      padding: 0.5rem;
+    }
+    .ticks li::before {
+      content: '✓';
+      background: none;
+      width: auto;
+      top: 0;
+    }
     a {
         border: 0;
+    }
+    button {
+      color: black;
+      background-color: white;
     }
     main a::after {
         content: " (" attr(href) ")";
@@ -1037,12 +1058,16 @@ h1 svg {
         content: '';
     }
     .cmd code {
-        background: #fefefe;
-        color: #111;
+        background: #fff;
+        color: #000;
+    }
+    .tested img {
+      background-color: black;
     }
     pre code {
         white-space: pre-wrap !important;
     }
+
     .expandable-section {
         border: 0;
         padding: 0;
@@ -1063,10 +1088,20 @@ h1 svg {
         border-left: 0.5rem solid;
         background: none;
     }
+    .highlight {
+        background: white;
+        border: 1px #000 solid;
+    }
+    .numbered .highlight::after,
+    .code-annotated.numbered + ol li::before  {
+        background: white;
+        border: 1px #000 solid;
+    }
 }
 @media (-ms-high-contrast: active) {
   img[src*=".svg"] {
-    background: #fefefe;
+    background: #111;
+    fill: #fefefe;
     padding: 0.5rem;
   }
   .ticks li::before {
@@ -1082,11 +1117,11 @@ h1 svg {
 }
 
 ::-moz-selection { /* Code for Firefox */
-    background: rgba(0,0,0,.8);
-    color: #fefefe;
+    background: rgba(254,254,254,.8);
+    color: #010101;
 }
 
 ::selection {
-  background: rgba(0,0,0,.8);
-  color: #fefefe;
+  background: rgba(254,254,254,.8);
+  color: #010101;
 }
