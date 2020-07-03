@@ -475,10 +475,16 @@ caption {
     border: 0;
 }
 
+/* METADATA */
+
+.metadata {
+    margin-top: 0.85rem;
+    font-size: 0.7rem;
+}
+
 /* Tags */
 .tags {
     margin-top: 0;
-    font-size: 0.85rem;
 }
 .tags * {
     display: inline;
@@ -492,18 +498,18 @@ caption {
     margin: 0 0.25rem 0 0;
 }
 
+
 /* Date */
 .date {
     margin-top: 0;
-    font-size: 0.85rem;
 }
 
 /* Author */
 
-.author {
+.post-author {
     margin-top: 0;
-    font-size: 0.85rem;
 }
+
 
 /* Notes and warnings */
 .note {

@@ -7,12 +7,13 @@
       <a href="{{ .Permalink }}" class="u-url">{{ .Title }}</a>
     </h1>
 
+    <div class="metadata">
     {{ partial "author.html" . }}
     {{ partial "date.html" . }}
-
     {{ with .Params.tags }}
       {{ partial "tags.html" . }}
     {{ end }}
+    </div>
 
     {{ if ne .Params.toc false }}
       {{ partial "toc" . }}

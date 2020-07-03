@@ -25,11 +25,14 @@
           {{ .Title }}
         </a>
       </h2>
+      <div class="metadata">
+
       {{ partial "date.html" . }}
       {{ with .Params.tags }}
         {{ partial "tags.html" . }}
       {{ end }}
       {{ partial "author.html" . }}
+      </div>
       {{ if site.Params.displaySummariesInList }}
         <div class="p-summary">{{ .Summary }}</div>
       {{ end }}
