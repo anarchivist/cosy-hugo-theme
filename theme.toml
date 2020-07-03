@@ -1,15 +1,15 @@
-name = "Cupper"
+name = "Cosy"
 license = "MIT"
-licenselink = "https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/LICENSE"
-description = "An accessibility-friendly Hugo theme, ported from the original Cupper project."
-homepage = "https://github.com/zwbetz-gh/cupper-hugo-theme"
+licenselink = "https://github.com/anarchivist/cosy-hugo-theme/blob/master/LICENSE"
+description = "An accessibility-friendly Hugo theme, based on the Cupper theme ported from the original Cupper project."
+homepage = "https://github.com/anarchivist/cosy-hugo-theme"
 tags = ["accessible", "blog", "documentation", "dark"]
 features = ["accessible", "blog", "documentation", "dark"]
 min_version = "0.60.1"
 
 [author]
-  name = "Zachary Betz"
-  homepage = "https://zwbetz.com/"
+  name = "Mark A. Matienzo"
+  homepage = "https://matienzo.org/"
 
 [original]
   name = "Cupper"
