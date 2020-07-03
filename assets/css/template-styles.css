@@ -497,16 +497,16 @@ caption {
     padding-top: 1rem;
     border-top: 2px solid;
 }
-.patterns-list > li > .tags li + li {
-    border-top: 0;
+.patterns-list > li > .metadata .tags li + li {
     margin-top: 0;
     padding-top: 0;
+    border-top: 0;
 }
 .patterns-list > li .p-summary {
     margin-top: 1rem;
 
 }
-.patterns-list a {
+.patterns-list > li > h2 > a {
     border: 0;
 }
 
