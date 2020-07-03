@@ -27,6 +27,10 @@ params:
   darkThemeAsDefault: true
   hideHeaderLinks: false
   search: true
+  displaySummariesInList: true
+  author:
+    name: Cosy Hugo Theme
+    url: https://cosy-hugo-theme.netlify.app/
   # A list of custom css files can be provided, which must be placed inside
   # 'static/'.
   # This is useful to override just specific css classes, instead of copying

@@ -17,9 +17,10 @@
 - id: publish_date
   translation: "Publish date:"
 - id: last_updated
-  translation: "Last updated:"
+  translation: "last updated:"
 - id: tags
   translation: "Tags:"
 - id: aria_label_tags
   translation: tags
-
+- id: authored_by
+  translation: by
