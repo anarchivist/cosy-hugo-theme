@@ -1,0 +1,14 @@
+<div class="syndication byline-item">
+  <strong>{{ T "syndicated_at" }} </strong>
+  <ul aria-label="{{ T "aria_label_syndication" }}">
+    {{ range $index, $link := . }}
+      <li>
+        <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+          <use xlink:href="#syndication"></use>
+        </svg>
+        {{ $url := urls.Parse $link }}
+        <a href="{{ $link }}" class="u-syndication">{{ $url.Host }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</div>

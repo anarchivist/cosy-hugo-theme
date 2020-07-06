@@ -1,0 +1,17 @@
+<div class="metadata">
+{{ partial "date.html" . }}
+{{ with .Params.tags }}
+  {{ partial "tags.html" . }}
+{{ end }}
+{{ with .Params.syndication }}
+  {{ partial "syndication.html" . }}
+{{ end }}
+{{ partial "author.html" . }}
+{{ with .Params.location }}
+  {{ partial "location.html" . }}
+{{ end }}
+<div class="permalink">
+        <a href="{{ .Permalink }}" class="u-url"><svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+          <use xlink:href="#link"></use>
+        </svg> Permalink to this post</a></div>
+</div>

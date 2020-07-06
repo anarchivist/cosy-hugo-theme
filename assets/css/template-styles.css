@@ -147,7 +147,9 @@ div:not([tabindex]):focus {
 h1,
 h2,
 h3,
-h4 {
+h4,
+.u-bookmark-of,
+.u-like-of {
     line-height: 1.125;
     text-align: left;
     font-weight: 500;
@@ -488,7 +490,7 @@ caption {
     list-style: none;
     margin-left: 0;
 }
-.patterns-list h2 {
+.patterns-list h2, .patterns-list .u-bookmark-of, .patterns-list .u-like-of {
     font-size: 1.25rem;
     line-height: 1.6;
 }
@@ -497,7 +499,7 @@ caption {
     padding-top: 1rem;
     border-top: 2px solid;
 }
-.patterns-list > li > .metadata .tags li + li {
+.patterns-list > li > .metadata .tags li + li, .patterns-list > li > .metadata .syndication li + li, .patterns-list > li > .metadata .location li + li {
     margin-top: 0;
     padding-top: 0;
     border-top: 0;
@@ -509,7 +511,9 @@ caption {
 .patterns-list > li > h2 > a {
     border: 0;
 }
-
+.patterns-list > li > div > a.p-name {
+    border: 0;
+}
 /* METADATA */
 
 .metadata {
@@ -517,34 +521,20 @@ caption {
     font-size: 0.7rem;
 }
 
-/* Tags */
-.tags {
+.metadata > div {
     margin-top: 0;
 }
-.tags * {
+.metadata > div * {
     display: inline;
     margin: 0;
 }
-.tags strong {
+.metadata > div strong {
     margin-right: 0.25rem;
 }
-.tags li {
+.metadata > div li {
     white-space: nowrap;
     margin: 0 0.25rem 0 0;
 }
-
-
-/* Date */
-.date {
-    margin-top: 0;
-}
-
-/* Author */
-
-.post-author {
-    margin-top: 0;
-}
-
 
 /* Notes and warnings */
 .note {

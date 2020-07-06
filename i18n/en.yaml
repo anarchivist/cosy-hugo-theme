@@ -22,5 +22,11 @@
   translation: "Tags:"
 - id: aria_label_tags
   translation: tags
+- id: syndicated_at
+  translation: "Syndicated at:"
+- id: aria_label_tags
+  translation: syndication link
 - id: authored_by
   translation: by
+- id: location
+  translation: "Location:"

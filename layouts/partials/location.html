@@ -1,0 +1,18 @@
+<div class="location byline-item">
+  <strong>{{ T "location" }} </strong>
+        <ul class="p-location h-card">
+        <li>
+          <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+            <use xlink:href="#location"></use>
+          </svg>
+        </li>
+        {{ if (isset . "name") }}
+        <li><a class="p-name{{ if (isset . "url") }} u-url" href="{{ .url }}"{{ else }}"{{ end }}>{{ .name }}</a></li>
+        {{ end }}
+        <li class="h-adr">
+        {{ if (isset . "locality") }}<span class="p-locality">{{ .locality }}</span> {{ end }}
+        {{ if (isset . "region") }}<span class="p-region">{{ .region }}</span> {{ end }}
+        {{ if (isset . "country_name") }}<span class="p-country-name">{{ .country_name }}</span> {{ end }}
+        </li>
+        </ul>
+</div>

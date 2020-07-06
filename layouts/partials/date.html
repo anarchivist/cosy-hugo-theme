@@ -1,4 +1,4 @@
-<div class="date">
+<div class="date byline-item">
   {{ $dateFormat := $.Site.Params.dateFormat | default "Jan 2, 2006" }}
   {{ $publishDate := .PublishDate }}
   <strong>{{ T "publish_date" }} </strong><time class="dt-published" datetime="{{ $publishDate.Format "2006-01-02T15:04:05-0700" }}">{{ $publishDate.Format $dateFormat }}</time>
