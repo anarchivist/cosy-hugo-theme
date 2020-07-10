@@ -19,11 +19,11 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
+  {{ $prismCSS := resources.Get "css/prism.css" | resources.Minify | resources.Fingerprint  }}
+  <link rel="stylesheet" href="{{ $prismCSS.Permalink }}" media="none" onload="this.media='all';">
 
-  <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" media="none" onload="this.media='all';">
-
-  {{ $templateStyles := resources.Get "css/template-styles.css" }}
-  {{ $styles := $templateStyles | resources.ExecuteAsTemplate "css/styles.css" . }}
+  {{ $templateStyles := resources.Get "css/template-styles.css"  }}
+  {{ $styles := $templateStyles | resources.ExecuteAsTemplate "css/styles.css" . | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
 
   {{ range .Site.Params.customCss -}}
