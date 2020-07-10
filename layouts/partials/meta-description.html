@@ -1,0 +1,5 @@
+{{ if .IsHome }}
+  {{ with .Site.Params.homeMetaContent }}
+    <meta name="description" content="{{ . | plainify }}">
+  {{ end }}
+{{ end }}

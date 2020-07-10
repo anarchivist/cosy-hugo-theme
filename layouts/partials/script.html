@@ -1,4 +1,4 @@
-{{ $prismJs := resources.Get "js/prism.js"  }}
+{{ $prismJs := resources.Get "js/prism.js" | resources.Minify | resources.Fingerprint  }}
 <script src="{{ $prismJs.Permalink }}"></script>
 
 {{ $templateDomScripts := resources.Get "js/template-dom-scripts.js" }}

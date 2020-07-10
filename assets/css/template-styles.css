@@ -384,6 +384,7 @@ caption {
 .logo img {
     width: 100%;
     max-width: 12rem;
+    max-height: 15vh;
 }
 .library-desc {
     margin-top: 0.5rem;
