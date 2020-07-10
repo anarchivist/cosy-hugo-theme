@@ -4,7 +4,7 @@
   <body>
     <a href="#main">{{ T "skip_to_content" }}</a>
     {{ partial "svg.html" . }}
-    <div class="wrapper">
+    <div class="wrapper {{ if .IsHome }}h-card{{ end }}">
       {{ partial "header.html" . }}
       <div class="main-and-footer">
         <div>
