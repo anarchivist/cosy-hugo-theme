@@ -34,7 +34,7 @@
       {{ partial "author.html" . }}
       </div>
       {{ if site.Params.displaySummariesInList }}
-        <div class="p-summary">{{ .Summary }}</div>
+        <div class="p-summary">{{ .Summary }}</div>{{ if .Truncated }} <div class="read-more"><a href="{{ .RelPermalink }}">(Read more …)</a></div>{{ end }}
       {{ end }}
     </li>
     {{ end }}

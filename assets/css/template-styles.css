@@ -481,9 +481,6 @@ caption {
 }
 
 /* Disqus Comments */
-#disqus-container {
-  text-align: center;
-}
 #disqus-button {
   width: 100%;
   padding: 0.25em 0.75em;
@@ -511,9 +508,12 @@ caption {
     padding-top: 0;
     border-top: 0;
 }
-.patterns-list > li .p-summary {
+.patterns-list > li .p-summary, .patterns-list > li .read-more {
     margin-top: 1rem;
-
+}
+.patterns-list > li .read-more {
+    font-size: 0.9rem;
+    font-style: italic;
 }
 .patterns-list > li > h2 > a {
     border: 0;
