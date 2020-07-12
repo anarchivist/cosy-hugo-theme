@@ -542,6 +542,11 @@ caption {
   text-indent: -2rem;
   padding-left: 2rem;
 }
+.metadata .p-author.h-card img.u-photo {
+  height: 0.75em;
+  width: 0.75em;
+  margin-right: 0.25em;
+}
 /* Notes and warnings */
 .note {
     border-left: 0.5rem solid;
