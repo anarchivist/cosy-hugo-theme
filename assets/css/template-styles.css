@@ -800,6 +800,7 @@ li > svg {
     height: 0.75em;
     width: 0.75em;
     margin-right: 0.25em;
+    border-bottom: 0px ;
 }
 h1 svg {
   margin-right: 0;
