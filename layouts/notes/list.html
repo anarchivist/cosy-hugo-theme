@@ -25,6 +25,10 @@
       {{ else if (isset .Params "like_of") }}
         <div class="e-content">
           <span aria-label="Liked">{{ if in .Params.tags "thisismyjam" }}♫{{ else }}❤️{{ end }}</span> <a href="{{ .Params.like_of.url }}" class="p-name u-like-of">{{ .Params.like_of.name | default .Params.like_of.url }}</a>
+      {{ else if (isset .Params "in_reply_to") }}
+        <div class="e-content">
+          <span aria-label="In reply to ">↩️</span> <a href="{{ .Params.in_reply_to.url }}" class="p-name u-in-reply-to">{{ .Params.in_reply_to.name | default .Params.in_reply_to.url }}</a>
+
       {{ else }}
          <div class="e-content p-name">
       {{ end }}
