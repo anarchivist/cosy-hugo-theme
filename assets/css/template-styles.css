@@ -380,6 +380,7 @@ caption {
 }
 .logo {
     border: 0;
+    background: transparent;
 }
 .logo img {
     width: 100%;

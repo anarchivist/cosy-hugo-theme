@@ -29,6 +29,7 @@
     .intro-and-nav, .main-and-footer { filter: invert(100%) }
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
+    img[src*="logo.svg"] { filter: invert(1) }
   </style>
 
   {{ $title := print (partial "title.html" .) " | " .Site.Title }}
