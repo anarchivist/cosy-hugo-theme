@@ -38,6 +38,6 @@
   {{ end }}
   <title>{{ $title }}</title>
   <meta property="og:title" content="{{ partial "title.html" . }}" />
-  <meta name="twitter:title" content="{{ partial "title.html }}" />
+  <meta name="twitter:title" content="{{ partial "title.html" . }}" />
   {{ partial "custom_head.html" .}}
 </head>
