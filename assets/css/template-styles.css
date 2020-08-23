@@ -499,6 +499,9 @@ caption {
     font-size: 1.25rem;
     line-height: 1.6;
 }
+.patterns-list>li>div>h2>span>a {
+  border: 0;
+}
 .patterns-list li + li {
     margin-top: 1rem;
     padding-top: 1rem;
