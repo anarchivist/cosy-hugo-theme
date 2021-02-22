@@ -1,0 +1,7 @@
+<div class="pagination">
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 -}}
+<a role="button" {{ if $pag.HasPrev }}class="pagination-button" href="{{ $pag.Prev.URL }}"{{ else }}class="pagination-button disabled" tabindex="-1" aria-disabled="true"{{ end }}>&laquo; Prev</a>
+<a role="button" {{ if $pag.HasNext }}class="pagination-button" href="{{ $pag.Next.URL }}"{{ else }}class="pagination-button disabled" tabindex="-1" aria-disabled="true"{{ end }}>Next &raquo;</a>
+{{- end }}
+</div>

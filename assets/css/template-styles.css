@@ -274,6 +274,30 @@ button {
   bottom: 0 !important;
 }
 
+/* Pagination pseudo-button */
+.pagination-button {
+  display: inline-block;
+  text-align: center;
+  width: 48%;
+  padding: 0.25em 0;
+  font-weight: 500;
+  font-size: 1.25rem;
+  border-radius: 0.33em;
+  font-family: inherit;
+  background: #fefefe;
+  color: #111;
+  border: 0;
+}
+.pagination-button.disabled {
+  cursor: not-allowed;
+  border: 2px dashed;
+  background: #000;
+  color: #fefefe;
+}
+.pagination-button a {
+  border-bottom: 0;
+}
+
 /* Forms */
 label {
   display: inline-block;
@@ -498,6 +522,9 @@ caption {
 .patterns-list h2, .patterns-list .u-bookmark-of, .patterns-list .u-like-of {
     font-size: 1.25rem;
     line-height: 1.6;
+}
+.patterns-list>li>div>h2>span>a {
+  border: 0;
 }
 .patterns-list li + li {
     margin-top: 1rem;
